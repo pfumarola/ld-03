@@ -1,5 +1,9 @@
 # Ignore .env
 .env
+.env.test
+
+# Ignore .DS_Store
+.DS_Store
 
 # Ignore node_modules
 node_modules
