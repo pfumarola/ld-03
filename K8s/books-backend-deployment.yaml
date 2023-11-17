@@ -16,4 +16,4 @@ spec:
       - name: books-backend
         image: ${{DOCKER_USERNAME}}/books-backend:latest
         ports:
-        - containerPort: "${{PORT}}"
+        - containerPort: 3000
