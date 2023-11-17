@@ -29,9 +29,4 @@ jobs:
           kubeconfig: ${{ secrets.KUBE_CONFIG }}
 
       - name: Deploy to Kubernetes
-        env:
-          PORT: ${{ secrets.PORT }}
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        run: |
-          envsubst < K8s/books-backend-deployment.yaml > K8s/deployment_ready.yaml
-          kubectl apply -f K8s/deployment_ready.yaml
+        run: kubectl apply -f K8s/books-backend-deployment.yaml
