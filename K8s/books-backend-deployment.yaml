@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: books-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: books-backend
+  template:
+    metadata:
+      labels:
+        app: books-backend
+    spec:
+      containers:
+      - name: books-backend
+        image: ${{DOCKER_USERNAME}}/books-backend:latest
+        ports:
+        - containerPort: ${{PORT}}

@@ -8,3 +8,5 @@ if(process.env.NODE_ENV === 'test') {
     console.log("loading env")
     dotenv.config();
 }
+
+export default dotenv;
