@@ -11,7 +11,7 @@ router.post('/', (req, res) => {
 
 //Read all books
 router.get('/', (req, res) => {
-    res.send('Not implemented. Read all books');
+    res.send('Not implemented. Read all books!!!');
 });
 
 //Read a single book
