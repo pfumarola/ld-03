@@ -29,4 +29,6 @@ jobs:
           kubeconfig: ${{ secrets.KUBE_CONFIG }}
 
       - name: Deploy to Kubernetes
-        run: kubectl apply -f K8s/books-backend-deployment.yaml
+        run: |
+          kubectl apply -f K8s/books-backend-deployment.yaml
+          kubectl apply -f K8s/books-backend-service.yaml
